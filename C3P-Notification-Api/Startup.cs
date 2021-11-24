@@ -35,6 +35,7 @@ namespace C3P_Notification_Api
                 c.SwaggerDoc("v1", new OpenApiInfo
                 { Title = "C3P_Notification_Api", Version = "v1" });
             });
+            services.AddCors();
 
         }
 
@@ -53,6 +54,13 @@ namespace C3P_Notification_Api
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "C3P_Notification_Api");
             });
+
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
 
             app.UseRouting();
 

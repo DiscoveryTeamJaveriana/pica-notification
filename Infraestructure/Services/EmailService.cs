@@ -353,8 +353,8 @@ namespace Infraestructure.Services
             try
             {
                 Console.WriteLine($"Estado del circuito: {_circuitBreakerPolicy.CircuitState}");
-                await _circuitBreakerPolicy.ExecuteAsync(async () =>
-                {
+                //await _circuitBreakerPolicy.ExecuteAsync(async () =>
+                //{
                     try
                     {
                         var mimeMessage = await CreateMimeMessageFromEmailMessage(message);
@@ -373,7 +373,7 @@ namespace Infraestructure.Services
                     {
                         await _smtpClient.DisconnectAsync(true);
                     }
-                });
+                //});
             }
             catch (Exception ex)
             {
