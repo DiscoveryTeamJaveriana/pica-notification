@@ -44,7 +44,7 @@ namespace Infraestructure.Services
             var mimeMessage = new MimeMessage();
             mimeMessage.From.Add(new MailboxAddress("C3P", "discoveryteamjave@gmail.com"));
             mimeMessage.To.Add(new MailboxAddress("C3P", message.Reciever));
-            mimeMessage.Subject = "Notificacion Automatimca";
+            mimeMessage.Subject = "Notificacion Automatica";
             mimeMessage.Body = new TextPart("html")
             {
                 Text = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional //EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n" +
