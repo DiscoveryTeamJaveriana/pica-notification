@@ -18,4 +18,4 @@ RUN dotnet publish "C3P_Notification_Api.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "C3P-Notification-Api.dll"]
+ENTRYPOINT ["dotnet", "C3P_Notification_Api.dll"]
