@@ -35,6 +35,7 @@ namespace C3P_Notification_Api
                 c.SwaggerDoc("v1", new OpenApiInfo
                 { Title = "C3P_Notification_Api", Version = "v1" });
             });
+            services.AddCors();
 
         }
 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using ApplicationCore.DTO;
+using Microsoft.AspNetCore.Cors;
 
 namespace C3P_Notification_Api.Controllers
 {
@@ -10,7 +11,7 @@ namespace C3P_Notification_Api.Controllers
     public class NotificationController : ControllerBase
     {
         private readonly IEmailService _emailService;
-        public NotificationController(IEmailService EmailService){
+        public NotificationController(IEmailService EmailService) {
 
             _emailService = EmailService;
         }
