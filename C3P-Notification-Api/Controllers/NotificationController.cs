@@ -20,7 +20,7 @@ namespace C3P_Notification_Api.Controllers
         [ProducesResponseType(typeof(NotificationResponse), 200)]
         [ProducesResponseType(500)]
         [HttpPost]
-        public async Task<IActionResult> sendEmail(EmailMessage message){
+        public async Task<IActionResult> sendEmail([FromBody] EmailMessage message){
             return Ok( await _emailService.SendEmail(message));
         }
 

@@ -379,7 +379,7 @@ namespace Infraestructure.Services
             {
                 Console.WriteLine($"Erro al enviar correo: {ex.Message}");
                 notificationRespose.statusCode = "0";
-                notificationRespose.message = "EEnvio de Email con Error => " + ex.Message;
+                notificationRespose.message = "Envio de Email con Error => " + ex.Message;
             }
 
             return notificationRespose;
